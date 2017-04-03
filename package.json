@@ -1,0 +1,9 @@
+{
+  "name": "regl-gpgpu-examples",
+  "version": "0.1.0",
+  "description": "Basic examples of gpgpu using regl",
+  "main": "index.js",
+  "repository": "git@github.com:20kbudget/regl-gpgpu-examples.git",
+  "author": "Fabricio C Zuardi <fabricio@fabricio.org>",
+  "license": "MIT"
+}

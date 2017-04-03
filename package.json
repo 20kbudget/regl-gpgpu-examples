@@ -5,5 +5,14 @@
   "main": "index.js",
   "repository": "git@github.com:20kbudget/regl-gpgpu-examples.git",
   "author": "Fabricio C Zuardi <fabricio@fabricio.org>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "budo index.js --live"
+  },
+  "devDependencies": {
+    "budo": "^9.4.7"
+  },
+  "dependencies": {
+    "bel": "^4.6.0"
+  }
 }

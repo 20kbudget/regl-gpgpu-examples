@@ -2,24 +2,25 @@ const example01 = require('./src/example01');
 const html = require('bel');
 
 const run = (fn) => (event) => {
+    console.log('run')
     if (event) { event.preventDefault(); }
+    console.log('click')
     fn();
 }
 
 const exampleDiv = html`<div id="example"></div>`;
 
-const link01 = html`<a href="#">01</a>`;
-link01.addEventListener('click', run(example01(exampleDiv)));
+const button01 = html`<button href="#" onclick=${example01(exampleDiv)}>01</button>`;
 
 const menu = html`<div id="menu">
     <ol>
-        <li>${link01}</li>
+        <li>${button01}</li>
     </ol>
 </div>`;
 
-const mainDiv = html`<div id="root">
-    ${menu}
+const mainDiv = html`<div id="root" style="background-color: #CCCCCC;">
     ${exampleDiv}
 </div>`;
 
 document.body.appendChild(mainDiv);
+example01(exampleDiv)();
